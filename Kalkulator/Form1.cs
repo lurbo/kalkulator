@@ -79,30 +79,48 @@ namespace Kalkulator
 
         private void button3_Click(object sender, EventArgs e)
         {
+
             stevka += "3";
             textBox1.Text = stevka;
         }
 
         private void buttonSestevanje_Click(object sender, EventArgs e)
         {
-            steviloEna = Convert.ToDouble(stevka);
-            stevka = "";
-            operacija = '+';
+            try
+            {
+                steviloEna = Convert.ToDouble(stevka);
+                stevka = "";
+                operacija = '+';
+            }
+            catch
+            {
 
+            }
         }
 
         private void buttonOdstevanje_Click(object sender, EventArgs e)
         {
+            try { 
             steviloEna = Convert.ToDouble(stevka);
             stevka = "";
             operacija = '-';
+            }
+
+            catch
+            {}
         }
 
         private void buttonDeljenje_Click(object sender, EventArgs e)
         {
+            try { 
             steviloEna = Convert.ToDouble(stevka);
             stevka = "";
             operacija = '/';
+
+             }
+
+            catch
+            {}
         }
 
         private void buttonMnozenje_Click(object sender, EventArgs e)
